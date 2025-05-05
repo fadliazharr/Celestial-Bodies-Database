@@ -1,0 +1,15 @@
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+git init
+git add universe.sql
+git commit -m "Add universe.sql database dump"
+__vsc_prompt_cmd_original
+git remote add origin https://github.com/fadliazharr/Celestial-Bodies-Database
+git remote -v
+git remote remove origin
+git remote add origin https://github.com/fadliazharr/Celestial-Bodies-Database.git
+git remote -v
+git push -u origin main
+git pull origin main --rebase
+__vsc_prompt_cmd_original
+git commit -m "Resolved merge conflicts"
+git add .
